@@ -12,6 +12,8 @@ build-backend = "hatchling.build"
 
 [project.scripts]
 serve = "http_mitm.main:run"
+serve-ssl = "http_mitm.main:run_ssl"
+
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/http_mitm"]

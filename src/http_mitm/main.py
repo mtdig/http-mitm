@@ -13,3 +13,14 @@ async def login(request: Request):
 
 def run():
     uvicorn.run(app, host="0.0.0.0", port=8080)
+
+
+def run_ssl():
+    import uvicorn
+
+    uvicorn.run(
+        app, host="0.0.0.0",
+        port=8443,
+        ssl_keyfile="key.pem",
+        ssl_certfile="cert.pem"
+    )
